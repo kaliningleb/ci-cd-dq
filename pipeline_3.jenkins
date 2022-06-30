@@ -9,22 +9,19 @@ pipeline {
         }
       }
       stage('List') {
-        steps{      
+        steps {      
           sh("dir ${JENKINS_HOME}")
         }
-
-
+      }
+      stage('Test') {
+        steps {
+          echo 'Testing...'
         }
-
-   stage('Test') {
-     steps {
-        echo 'Testing...'
-     }
+      }
+     stage('Deploy') {
+        steps {
+          echo 'Deploying...'
+         }
+      }
    }
-   stage('Deploy') {
-     steps {
-       echo 'Deploying...'
-     }
-   }
-  }
 } 
