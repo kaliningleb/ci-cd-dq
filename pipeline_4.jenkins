@@ -2,8 +2,12 @@ pipeline {
    agent any
 
    stages {
-
-      stage('runpy') {
+	stage('install req') {
+		steps {
+	  		sh 'pip install requirements'
+		}
+	}
+      stage('run tests') {
         steps{      
           sh 'python tests.py'
         }
