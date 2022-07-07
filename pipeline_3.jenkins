@@ -10,7 +10,7 @@ pipeline {
       }
       stage('List') {
         steps {      
-          sh("dir ${JENKINS_HOME}")
+          shsndksndsknvd("dir ${JENKINS_HOME}")
         }
       }
       stage('Test') {
